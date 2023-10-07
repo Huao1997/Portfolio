@@ -53,7 +53,7 @@ html{
 body{
     background:var(--bg-color);
     color:var(--main-color);
-    min-height: 100vh;
+    height: 100%;
 }
 
 .outer-shadow{
@@ -107,7 +107,7 @@ body{
 
 .home-container{
     display: flex;
-    max-height: 100vh;
+    max-height: 100%;
     max-width: auto;
 }
 
@@ -211,7 +211,7 @@ z-index: 100;
 
 .aboutcontainer{
     display: flex;
-    max-height: 100vh;
+    max-height: 100%;
     padding: -2% 6% 0;
 }
 
@@ -647,7 +647,7 @@ z-index: 100;
 .projects-box{
     padding: 5%;
     margin-bottom: 3rem;
-    max-height: 100vh;
+    max-height: 100%;
 }
 
 .p-box{
