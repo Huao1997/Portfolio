@@ -53,6 +53,7 @@ html{
 body{
     background:var(--bg-color);
     color:var(--main-color);
+    min-height: 100vh;
 }
 
 .outer-shadow{
@@ -219,13 +220,11 @@ z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 12%;
-    margin-left: 3%;
 }
 
 .about-img{
-    height: 250px;
-    width: auto;
+    width: 65%;
+    height: auto;
     border-radius: 50%;
     border: 2px solid #FFE4E1;
 }
