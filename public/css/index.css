@@ -53,9 +53,6 @@ html{
 body{
     background:var(--bg-color);
     color:var(--main-color);
-    @media(min-width: 320px){
-        body{display: inline;}
-    }
 }
 
 .outer-shadow{
