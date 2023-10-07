@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    place-content: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: right;
+    padding: 0.5% 3%;
+    background-color: rgb(247, 165, 178);
+}
+
+.navbar h2{
+    padding-right: 2%;
+}
+
+.navbar form button{
+    padding: 4%;
+    width: 80px;
+    height: 30px;    
+    background-color: rgba(215, 46, 134, 0.852);
+    border: 2px solid rgba(72, 36, 46, 0.621);
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    color: rgb(220, 214, 214);
+}
+.navbar form button:hover{
+    background-color: rgb(69, 59, 68);
+}
+
+
+.navbar p{
+    margin: 0 0.5%;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: azure;
+    font-weight: 700;
+
+}
+.navbar p:nth-child(2){
+    color: rgba(255, 237, 237, 0.907) ;
+    margin-right: 1.5%;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5% 10%;
+    position: relative;
+}
+
+.container a{
+    text-decoration: none;
+    position: absolute;
+    top:15%;
+    left:1%;
+    border: 1px solid rgb(225, 223, 220);
+    padding: 8px 10px;
+}
+.container a:hover{
+    background-color: rgba(246, 190, 224, 0.395);
+}
+
+
+.brief{
+    width: 68%;
+    border: 10px ridge rgba(67, 66, 66, 0.79);
+    padding: 3%;
+    background:radial-gradient(circle farthest-side at center,white,rgba(218, 87, 109, 0.529));
+}
+.brief .b1{
+    font-size: 18px;
+    font-weight: 600;
+}
+.brief .b2{
+    font-size: 14px;
+    color: rgb(54, 52, 52);
+}
+.brief .b2 p:nth-child(1){
+    font-weight: 700;
+    margin-bottom: 2px;
+}

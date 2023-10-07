@@ -1,0 +1,650 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+*::before,*::after{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --pink:#ff74a4;
+    --violet:#9f6ea3;
+    --lightblack:#515C6F;
+    --white:#ffffff;
+    --darkwhite:#cecaca;
+    --pinkshadow:#ffcbdd;
+    --lightbshadow:rgba(0,0,0,0.15);
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    padding: 8% 3%; 
+    background: #ffcbdd;  
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+    cursor: default;
+}
+.navbar{
+    margin-top: 30%;
+}
+.navbar a{
+    font-size: 2rem;
+    color: var(--lightblack);
+    transition: .3s;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: var(--pink);
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin:0 50px 0 50px;
+    padding-left: 180px;
+}
+
+.wrapper{
+    width: 300px;
+    height: 400px;
+    overflow:hidden;
+    box-shadow: 0px 6px 15px var(--lightbshadow);
+    border-radius: 15px;
+    padding: 10% 12%;
+    position: relative;
+}
+
+
+.wrapper i{
+    cursor: pointer;
+}
+.wrapper .music-list ul li i{
+    cursor: default;
+}
+
+
+.light{
+    transition: 1s;
+    background-color: GhostWhite ;
+}
+
+.dark{
+    transition: 1s;
+    background-color: rgba(105, 105, 105, 0.829)   ;
+}
+
+
+.wrapper.active{  
+    min-height: 100px;
+    max-height: 150px ;
+}
+
+.bx-plus{
+    position: absolute;
+    right: 5%;
+    top:5%;
+}
+
+.top-bar,.progress-area .timer,.controls,
+.music-list .musicheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-bar i{
+    font-size: 25px;
+    color: var(--lightblack);
+    margin-top: 2px;
+}
+.active .top-bar i{
+    font-size: 20px;
+    color: var(--lightblack);
+    margin-top: 2px;
+}
+
+.top-bar i#more-music:hover{
+    opacity: 0.8;
+    background-color:rgba(220, 220, 220, 0.349);
+}
+
+.active .top-bar i#more-music{
+    visibility: hidden;
+}
+
+.music-list{
+    position: absolute;
+    right:0;
+    top:0;
+    opacity: 0;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;
+    background:var(--white);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.14s ease-out;
+}
+
+.musicheader .row span{
+    margin-left: 5px;
+}
+.musicheader i{
+    padding-top: 2px;
+}
+.musicheader #close{
+    font-size: 22px;
+    color: var(--lightblack);
+    margin-top: -20px;
+    margin-right: 5px;
+    border:1px solid #515C6F;    
+    border-radius: 50%;
+    background-color: white;
+}
+
+.musicheader #close:hover{
+    background-color:rgb(30, 29, 29);
+    color: #f0f0f0;
+}
+
+
+
+/* js */
+.music-list.show{
+    right: 0;
+    opacity: 0.9;
+    pointer-events: auto;
+
+}
+
+
+.music-list .musicheader .row{
+    padding: 20% 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(40, 39, 39);
+}
+
+.music-list .row i{
+    cursor: default;
+}
+
+
+.music-list ul{
+    margin-top:-20px;
+    max-height: 60%;
+    overflow-y:auto;
+}
+
+.music-list ul::-webkit-scrollbar{
+    width:0px;
+}
+.music-list ul li{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 0;
+    color: var(--lightblack);
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+}
+.music-list ul li:last-child{
+    border-bottom: 0px;
+}
+
+.music-list ul li i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.music-list ul li i.active{
+    background: rgb(160, 27, 27);
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.music-list ul li .row{
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.music-list ul li .row span{
+    font-size: 14px;
+    font-weight: 600;
+}
+ul li .row p{
+    opacity: 0.9;
+    font-size: 13px;
+}
+.music-list ul li audio{
+    cursor: pointer;
+}
+.music-list ul li span{
+    cursor: pointer;
+}
+ul li .audio-duration{
+    font-size: 15px;
+    text-align: right; 
+    display: flex;
+    align-items: center;
+}
+
+ul li.playing .row{
+    color:var(--violet);
+    pointer-events: none;
+}
+ul li.playing audio{
+    color:var(--violet);
+    pointer-events: none;
+}
+ul li.playing span{
+    color:var(--violet);
+    pointer-events: none;
+}
+
+.img-area{
+    height: 150px;
+    width: 150px;
+    margin-left:20% ;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 6px 15px var(--lightbshadow);
+    border-radius: 50%;
+}
+.img-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.active .img-area{
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    height: 60px;
+    width: 60px;
+    margin-left:5% ;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px var(--lightbshadow);
+    margin-top: 2%;
+}
+.active .img-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.song-details{
+    text-align: center;
+    /* margin: 20px 0 0; */
+    color: rgb(45, 40, 40);
+}
+.song-details .name{
+    font-size: 15px;
+    font-weight: 700;
+}
+.song-details .artist{
+    font-size: 13.5px;
+    opacity: 0.6;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.active .song-details{
+    position: absolute;
+    top:30px;
+    left: 35%;
+    text-align: left;
+    color: rgb(45, 40, 40);
+}
+
+
+.progress-area{
+    height: 6px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.progress-area .progress-bar{
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    position: relative;
+    background: linear-gradient(90deg, GhostWhite 0%,LightSteelBlue 100%);
+}
+.progress-bar::before{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    border-radius: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5px;
+    background:inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.progress-area:hover .progress-bar::before{
+    opacity: 1;
+}
+.progress-area .timer{
+    margin-top: 10px;
+}
+.progress-area .timer span{
+    font-size: 10px;
+    color: var(--lightblack);
+}
+
+/* 
+.active .progress-area{
+    visibility: hidden;
+
+} */
+
+.active .progress-area{
+    height: 5px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+}
+.active .progress-area .progress-bar{
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    position: relative;
+    background: linear-gradient(90deg, rgb(226, 199, 230) 0%,rgb(204, 116, 172) 100%);
+}
+.active .progress-bar::before{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: inherit;
+    top: 55%;
+    transform: translateY(-50%);
+    right: -5px;
+    background:inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+}
+.active .progress-area:hover .progress-bar::before{
+    opacity: 1;
+}
+.active .progress-area .timer{
+    margin-top: 5px;
+}
+.active .progress-area .timer span{
+    font-size: 10px;
+    color: var(--lightblack);
+}
+
+
+.controls{
+    margin: 30px 0 5px ;
+    position: relative;
+}
+
+.controls span{
+    position: absolute;
+    right: 0%;
+    bottom: 20%;
+    display: none;
+}
+.controls .LT{
+    padding-top: 50px;
+}
+.controls .LT span.display{
+    display: unset;
+}
+
+.controls i{
+    font-size: 28px;
+    user-select: none;
+    background: linear-gradient(Silver  0%,LightSteelBlue    100%);
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.controls i:nth-child(2),
+.controls i:nth-child(4){
+    font-size: 32px;
+}
+.controls #repeat-plist:hover{
+    background: black;
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.controls #prev{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.controls #prev:hover{
+    background: black;
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.controls #next{
+    margin-left: 10px;
+    margin-right: 35px;
+}
+.controls #next:hover{
+    background: black;
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.controls .play-pause{
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(LightSteelBlue 0%,LightSteelBlue  100%);
+    border-radius: 50%;
+    box-shadow: 0 0 5px LightSteelBlue; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.play-pause::before{
+    content: "";
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    border-radius: inherit;
+    opacity: 0.9;
+    background: GhostWhite ;
+}
+.controls .play-pause:hover{
+    background: rgb(99, 136, 184);
+}
+.play-pause i{
+    height: 43px;
+    width: 43px;
+    line-height: 43px;
+    text-align: center;
+    border-radius: inherit;
+    background-clip:text ;
+    background: inherit;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.controls .bxs-heart-circle:hover{
+    background: rgb(160, 27, 27);
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.controls #BF.active{
+    background: rgb(245, 128, 128);
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.active .controls{
+    position: absolute;
+    top: 51%;
+    width: 65%;
+    left: 20%;
+}
+.active .controls span{
+    position: absolute;
+    right: 0%;
+    bottom: 12%;
+}
+.active .controls i{
+    font-size: 25px;
+    user-select: none;
+    background: linear-gradient(Silver  0%,LightSteelBlue    100%);
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.active .controls i:nth-child(2),
+.active .controls i:nth-child(4){
+    font-size: 28px;
+}
+.active .controls #prev{
+    margin-right: 5px;
+}
+.active .controls #next{
+    margin-left: 5px;
+}
+.active .controls .play-pause{
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(LightSteelBlue 0%,LightSteelBlue  100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.active .controls .play-pause:hover{
+    background: rgb(219, 25, 148);
+}
+.active .play-pause::before{
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: inherit;
+    opacity: 0.9;
+    background: GhostWhite ;
+}
+.active .controls .bxs-heart-circle:hover{
+    background: rgb(160, 27, 27);
+    border-radius: inherit;
+    background-clip:text ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.active .controls .LT{
+    padding-top: 35px;
+}
+
+
+
+
+.button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: inset 3px 2px 5px 0 rgba(255,255,255,0.5),rgba(104,139,255,0.1) 7px 3px 10px,rgba(0,0,0,0.1) 7px 5px 10px;
+    text-align: center;
+}
+
+
+#mode1{
+    background-color: GhostWhite;
+    opacity: 0.2;
+    border: none;
+
+}
+#mode1:hover{
+    background-color:ghostwhite;
+    border: 1px solid DimGray ;
+}
+
+
+#mode2{
+    background-color: transparent;
+    border: none;
+}
+
+
+#mode2:hover{
+    background-color: LightSteelBlue;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+
+/* =========簡介======== */
+
+.container2{
+    width: 420px;
+    padding: 10px;
+    outline:1.2rem solid rgba(179, 44, 139, 0.31);  
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-color: #fff2f2d4;
+    margin-right: 2%;
+    margin-left: -1.5%;
+}
+
+.container2 h1{
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.container2 p{
+    font-size: 16px;
+}

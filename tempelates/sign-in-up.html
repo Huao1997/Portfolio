@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome EMIC | Please SIGN IN/UP</title>
+    <link rel="stylesheet" href="../public/css/sign-in-up.css">
+</head>
+<body>
+    <a id="Back" href="index.html">Portfolio</a>
+    <div class="container"  id="container">
+        <div class="sign-in-container form-container">
+            <form action="HomePage.html" method="post">
+                <h1>SIGN IN</h1>
+                <div class="input">
+                    <input type="email" name="ID" autocomplete="off" placeholder="請輸入您的email">
+                    <label></label>
+                </div>
+                <div class="input">
+                    <input type="password" name="psd" autocomplete="off" placeholder="請輸入您的密碼">
+                    <label></label>
+                </div>
+                <a href="ForgetPage.html" class="forget">Forget Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="sign-up-container form-container">
+            <form action="HomePage.html" method="post">
+                <h1>Create Account</h1>
+                <div class="input">
+                    <input type="text" name="Name" autocomplete="off" placeholder="請輸入您的姓名">
+                    <label></label>
+                </div>
+                <div class="input">
+                    <input type="email" name="ID" autocomplete="off" placeholder="請輸入您的email">
+                    <label></label>
+                </div>
+                <div class="input">
+                    <input type="password" name="psd" autocomplete="off" placeholder="請輸入您的密碼">
+                    <label></label>
+                </div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="over-container" id="over-container">
+                <div class="overplay">
+                    <div class="overpanel over-r">
+                        <h1>Welcome!</h1>
+                        <p>還沒加入嗎?</p>
+                        <p>快點<button>Sign Up</button></p>
+                        <p>加入我們的行列吧!</p>
+                    </div>
+                    <div class="overpanel over-l">
+                        <h1>Welcome Back!</h1>
+                        <p>請<button>Sign In</button></p>
+                        <p>查看頁面!</p>
+                    </div>
+                </div>
+            <button id="overBtn" ></button>  
+        </div>
+    </div>
+</body>
+
+<script>
+    const container =document.getElementById('container');
+    const overcontainer =document.getElementById('over-container');
+    const overBtn = document.getElementById('overBtn');
+    
+    overBtn.addEventListener('click', () =>{
+        container.classList.toggle('panel-r-active');
+    });
+</script>
+
+
+</html>

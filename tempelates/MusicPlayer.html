@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player | EmilyChiang</title>
+    <link rel="stylesheet" href="../public/css/MusicPlayer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">MusicPlayer</a>
+        <nav class="navbar">
+            <a href="index.html">Portfolio</a>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="wrapper phone light">
+            <div class="top-bar">
+                <button id="mode1" class="button">
+                    <i class='bx bx-moon'></i> 
+                </button>
+                <button id="mode2" class="boxchange">
+                    <i class='bx bx-minus'></i>
+                </button>
+                <i id="more-music" class="material-icons">queue_music</i>
+            </div>
+            <div class="img-area">
+                <img src="" alt="">
+            </div>
+            <div class="song-details">
+                <p class="name"></p>
+                <p class="artist"></p>
+            </div>
+            <div class="progress-area">
+                <div class="progress-bar">
+                    <audio id="main-audio" src=""></audio>
+                </div>
+                <div class="timer">
+                    <span class="current">0:00</span>
+                    <span class="duration"></span>
+                </div>
+            </div>
+            <div class="controls">
+                <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                <i id="prev" class="material-icons">skip_previous</i>
+                <div class="play-pause">
+                    <i class="material-icons play">play_arrow</i>
+                </div>
+                <i id="next" class="material-icons">skip_next</i>
+                <div class="LT">
+                    
+                </div>
+            </div>
+            <div class="music-list">
+                <div class="musicheader">
+                    <div class="row">
+                        <i class="list material-icons">queue_music</i>
+                        <span>MUSIC LIST</span>
+                    </div>
+                    <i id="close" class="material-icons">close</i>
+                </div>
+                <ul>
+                    <!-- here li list coming from js -->
+                </ul>
+            </div>  
+        </div>
+    </section>
+    <section class="container2">
+        <h1>簡介</h1>
+        <h2>音樂播放器實作。</h2>
+        <h3>運用HTML、CSS、JS、NODEJS，完成前端畫面設計排版並連結伺服器。</h3>
+        </br>
+        <p>使用說明：</p>
+        <p>1.有明亮模式及黑暗模式，可依據喜好點擊左上方「月亮/太陽」做模式切換。</p>
+        <p>2.提供縮小放大功能，可點擊正上方「-」將音樂播放器縮小。</p>
+        <p>3.可查看音樂清單，請點擊右上方圖示。</p>
+        <p>4.提供循環播放、單首播放、隨機播放模式。</p>
+        <p>5.點擊右下方愛心，可進行歌曲收藏。已收藏歌曲紀錄可於音樂清單中查看。</p>
+    </section>
+    <script src="../public/javascript/music-list.js"></script>
+    <script src="../public/javascript/MusicPlayer.js"></script>
+
+</body>
+</html>
