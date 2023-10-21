@@ -1,7 +1,8 @@
 *{
     padding: 0px;
-    margin: 0;
+    margin: 0px;
     box-sizing: border-box;
+    
 }
 
 
@@ -13,25 +14,30 @@ body{
 
 .navbar{
     display: flex;
-    justify-content: right;
-    padding: 0.5% 3%;
+    padding: 4% 3%;
     background-color: rgb(247, 165, 178);
-}
-
-.navbar h2{
-    padding-right: 2%;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    min-width: 100vw;
 }
 
 .navbar form button{
-    padding: 4%;
-    width: 80px;
-    height: 30px;    
-    background-color: rgba(215, 46, 134, 0.852);
-    border: 2px solid rgba(72, 36, 46, 0.621);
+    padding: 3%;
+    width: 45px;
+    height: 45px;    
+    background-color: rgba(215, 46, 133, 0.558);
+    border: 2px solid rgba(72, 36, 46, 0.108);
     font-weight: 600;
-    border-radius: 3px;
+    border-radius: 8px;
     cursor: pointer;
     color: rgb(220, 214, 214);
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navbar form button:hover{
     background-color: rgb(69, 59, 68);
@@ -39,13 +45,10 @@ body{
 
 
 .navbar p{
-    margin: 0 0.5%;
-    display: flex;
-    align-items: center;
+    margin: 0 1%;
     font-size: 22px;
     color: azure;
     font-weight: 700;
-
 }
 .navbar p:nth-child(2){
     color: rgba(255, 237, 237, 0.907) ;
@@ -57,35 +60,36 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 0 5%;
-    position: relative;
+    flex-wrap: wrap;
+    margin:8% 8% 15% 8%;
+    position: absolute;
+    top:10%;
 }
 
 .container a{
     text-decoration: none;
-    position: absolute;
-    top:15%;
-    left:1%;
     border: 1px solid rgb(225, 223, 220);
     padding: 8px 10px;
+    margin-bottom: 10%;
+    margin-left: -5%;
 }
 .container a:hover{
     background-color: rgba(246, 190, 224, 0.395);
 }
 
 .container-text{
-    margin: 3% 0;
+    margin-bottom: 10%;
 }
 
 .brief{
-    width: 83%;
+    margin-top: 10%;
+    width: 85vw;
     border: 10px ridge rgba(67, 66, 66, 0.79);
     padding: 3%;
     background:radial-gradient(circle farthest-side at center,white,rgba(218, 87, 109, 0.529));
-    margin: 0 5%;
 }
 .brief .b1{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 .brief .b1 a{
