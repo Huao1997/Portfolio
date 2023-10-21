@@ -626,17 +626,19 @@ section{
     flex-wrap: wrap;
     margin: 10%;
 }
-
 .container2{
+    min-height: 100vh;
+    position: absolute;
+    top: 85%;
+}
+
+.container2 .container2-text{
     width: 420px;
     padding: 10px;
     outline:0.8rem solid rgba(179, 44, 139, 0.31);  
     border: 1px solid transparent;
     border-radius: 13px;
     background-color: #fff2f2d4;
-    position: absolute;
-    top: 85%;
-    left: -5%;
     max-width: 90vw;
     display: unset;
 }
