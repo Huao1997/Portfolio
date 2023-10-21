@@ -31,17 +31,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     min-height: 100vh;
-    background:radial-gradient(circle at center,rgb(247, 227, 251), rgb(255, 255, 250), rgb(249, 227, 244),rgb(247, 227, 251));
-    cursor: crosshair;
+    background:linear-gradient(rgb(228, 201, 233), rgb(255, 255, 250), rgb(255, 233, 250),rgb(228, 201, 233));
 }
 
 .header{
     position: fixed;
     top:0;
     left:0;
-    height: 100%;
-    padding: 8% 3%; 
+    width: 100%;
+    padding: 5%; 
     background: #ffcbdd;  
     z-index: 100;
 }
@@ -53,7 +53,7 @@ body{
     cursor: default;
 }
 .navbar{
-    margin-top: 30%;
+    margin-top: 8%;
 }
 .navbar a{
     font-size: 2rem;
@@ -71,18 +71,24 @@ a{
 }
 
 .container{
-    margin:0 50px 0 50px;
+    margin:0;
     padding-left: 180px;
+    position: absolute;
+    top: 25%;
+    left: 10.5%;
 }
 
 .wrapper{
     width: 300px;
-    height: 420px;
+    height: 400px;
     overflow:hidden;
     box-shadow: 0px 6px 15px var(--lightbshadow);
     border-radius: 15px;
     padding: 10% 12%;
-    position: relative;
+    position: absolute;
+    left: -15%;
+    top:25%;
+    max-width: 98vw;
 }
 
 
@@ -101,13 +107,13 @@ a{
 
 .dark{
     transition: 1s;
-    background-color: rgba(105, 105, 105, 0.829)   ;
+    background-color: rgba(170, 159, 159, 0.829)   ;
 }
 
 
 .wrapper.active{  
     min-height: 100px;
-    max-height: 160px ;
+    max-height: 170px ;
 }
 
 .bx-plus{
@@ -385,7 +391,7 @@ ul li.playing span{
     border-radius: 50px;
     cursor: pointer;
     position: relative;
-    top: 20px;
+    top: 35px;
 }
 .active .progress-area .progress-bar{
     height: inherit;
@@ -442,7 +448,7 @@ ul li.playing span{
 .controls i{
     font-size: 28px;
     user-select: none;
-    background: linear-gradient(Silver  0%,LightSteelBlue    100%);
+    background: linear-gradient(rgb(193, 217, 249)  0%,rgb(194, 213, 241)    100%);
     background-clip:text ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -515,13 +521,6 @@ ul li.playing span{
     -webkit-text-fill-color: transparent;
 }
 
-.controls .LT .display i:hover{
-    background: rgb(160, 27, 27);
-    border-radius: inherit;
-    background-clip:text ;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 .controls #BF.active{
     background: rgb(160, 27, 27);
     border-radius: inherit;
@@ -546,7 +545,7 @@ ul li.playing span{
 .active .controls i{
     font-size: 25px;
     user-select: none;
-    background: linear-gradient(Silver  0%,LightSteelBlue    100%);
+    background: linear-gradient(rgb(193, 217, 249)  0%,rgb(194, 213, 241)    100%);
     background-clip:text ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -569,7 +568,7 @@ ul li.playing span{
     display: flex;
     justify-content: center;
     align-items: center; 
-
+    margin-top: 3px;
 }
 .active .controls .play-pause:hover{
     background: rgb(219, 25, 148);
@@ -583,15 +582,8 @@ ul li.playing span{
     opacity: 0.9;
     background: GhostWhite ;
 }
-.active .controls .LT .display i:hover{
-    background: rgb(160, 27, 27);
-    border-radius: inherit;
-    background-clip:text ;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 .active .controls .LT{
-    padding-top: 36px;
+    padding-top: 38px;
 }
 
 
@@ -624,24 +616,29 @@ ul li.playing span{
 }
 
 
-#mode2:hover{
-    background-color: LightSteelBlue;
-    opacity: 0.5;
-    border-radius: 10px;
-}
-
 
 /* =========簡介======== */
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10%;
+}
 
 .container2{
     width: 420px;
     padding: 10px;
-    outline:1.2rem solid rgba(179, 44, 139, 0.31);  
+    outline:0.8rem solid rgba(179, 44, 139, 0.31);  
     border: 1px solid transparent;
     border-radius: 13px;
     background-color: #fff2f2d4;
-    margin-right: 2%;
-    margin-left: -1.5%;
+    position: absolute;
+    top: 85%;
+    left: -5%;
+    max-width: 90vw;
+    display: unset;
 }
 
 .container2 h1{
