@@ -20,6 +20,7 @@ body{
     position: fixed;
     top: 0;
     min-width: 100vw;
+    z-index: 99;
 }
 
 .navbar form button{
@@ -66,7 +67,7 @@ body{
     top:10%;
 }
 
-.container a{
+.container #index{
     text-decoration: none;
     border: 1px solid rgb(225, 223, 220);
     padding: 8px 10px;
@@ -92,11 +93,7 @@ body{
     font-size: 16px;
     font-weight: 600;
 }
-.brief .b1 a{
-    position: unset;
-    border:unset;
-    padding: unset;
-}
+
 .brief .b1 a:hover{
     background-color: transparent;
 }
