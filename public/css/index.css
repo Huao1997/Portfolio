@@ -688,6 +688,23 @@ z-index: 100;
     color:var(--text-color1);
 }
 
+#git-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:4.5rem;
+    height: 4.5rem;
+    margin: 3rem 5rem 3rem 0;
+    transition: .5s ease;
+    padding-top: 0.5rem;
+    border-radius: 50%;
+}
+
+#git-icon a:hover{
+    box-shadow: 0 0 10rem rgb(69, 68, 68) ;
+}
+
+
 #fb-icon a{
     display: inline-flex;
     justify-content: center;
@@ -738,6 +755,5 @@ z-index: 100;
 #in-icon a:hover{
     box-shadow: 0 0 4rem #66b3ff;
 }
-
 
 

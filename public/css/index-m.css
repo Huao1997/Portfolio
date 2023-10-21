@@ -613,7 +613,6 @@ html{
 .contact{
     display: flex;
     justify-content: center;
-    padding-left:5rem;
 }
 
 
@@ -621,6 +620,20 @@ html{
     text-align: center;
     font-size: 3rem;
     color:var(--text-color1);
+}
+#git-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 3rem 2.3rem 3rem 2rem;
+    transition: .5s ease;
+}
+
+#git-icon a:hover{
+    box-shadow: 0 0 6rem rgb(69, 68, 68) ;
 }
 
 #fb-icon a{
@@ -630,7 +643,7 @@ html{
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    margin: 3rem 5rem 3rem 0;
+    margin: 3rem 2.5rem 3rem 0;
     transition: .5s ease;
 }
 
@@ -648,7 +661,7 @@ html{
     align-items: center;
     width: 5rem;
     height: 4rem;
-    margin: 4rem 5rem 3rem 0;
+    margin: 4rem 2.5rem 3rem 0;
     transition: .5s ease;
 }
 
@@ -664,7 +677,7 @@ html{
     align-items: center;
     width:4.5rem;
     height: 4.5rem;
-    margin: 3rem 5rem 3rem 0;
+    margin: 3rem 2.5rem 3rem 0;
     transition: .5s ease;
     padding-top: 0.5rem;
 
