@@ -11,42 +11,43 @@
 
 #Back{
     padding: 5px 8px;
-    border: 1.5px solid #7e8aa1;
-    background-color: rgb(224, 218, 212);
+    border: 1.5px solid #9aa6bd9b;
+    background-color: rgba(150, 212, 209, 0.677);
     text-decoration: none;
-    position: absolute;
-    top: 2%;
-    right: 3%;
     font-weight: 600;
     border-radius: 4px;    
-    z-index: 99;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #Back:hover{
     background-color: aliceblue;
 }
 
 body{
-    height: 100vh;
+    height: 100wh;
     display: grid;
     place-content: center;
+
 }
 
 .container {
     position: relative;
-    width: 400px;
-    height: 630px;
+    width: 300px;
+    height: 580px;
     background-color: cadetblue;
-    box-shadow: 25px 30px 55px #5557;
+    box-shadow: 10px 20px 30px #5557;
     border-radius: 13px;
     overflow: hidden;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .form-container{
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 0px 20px;
+    padding: 0px 5px;
     transition: all 0.3s ease-in;
 }
 
@@ -82,7 +83,6 @@ h1{
     border: 3px solid brown;
     
 }
-
 
 
 .input{
@@ -153,7 +153,7 @@ button{
 
 .over-container{
     position: absolute;
-    top: 73%;
+    top: 70%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -171,22 +171,22 @@ button{
 #overBtn{
     cursor: pointer;
     position: absolute;
-    left: 237px;
-    top: 92px;
+    left: 182px;
+    top: 88px;
     transform: translateX(-50%);
     width: 147.6px;
     height: 39px;
     border: 0px;
     border-radius: 20px;
-    background-color: black;
-
+    background-color: transparent;
+    transition: 0.3s;
 }
 
 .overplay{
     position: relative;
     background: rgb(182, 197, 149);
     color: #FFF;
-    height: 27%;
+    height: 30%;
 }
 
 .overpanel{
@@ -197,17 +197,16 @@ button{
     flex-direction: column;
     text-align: center;
     height: 25%;
-    left: 25%;
-    transition: 0.3s ease-in-out;   
+    left: 15%;
+    transition: 0.3s ease-in;   
 }
 .over-l{
-    left: -230px;
-    top:60px;
-    transform: translateX(0%);
+    top:35%;
+    opacity: 0;
 }
 .over-r{
-    top: 0;
-    transform: translateY(150%);
+    top:35%;
+    opacity: 1;
 }
 .overpanel h1{
     color: #FFF;
@@ -230,7 +229,7 @@ p{
     transform: translateX(0%);
 }
 .panel-r-active .over-l{
-    transform: translateX(150%);
+    opacity: 1;
 }
 .panel-r-active .over-r{
     transform: translateX(200%);
@@ -239,7 +238,7 @@ p{
 
 .panel-r-active #overBtn{
     position: absolute;
-    left: 208px;
+    left: 165px;
     top: 73px;
     width: 143px;
 }
@@ -252,7 +251,7 @@ p{
     transform: translateX(0%);
     opacity: 1;
     z-index: 5;
-    animation: show 0.8s;
+    animation: show 0.3s;
 }
 
 
